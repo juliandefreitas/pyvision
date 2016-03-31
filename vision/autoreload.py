@@ -27,9 +27,9 @@ def ipython_autoreload_hook(self):
         reload_all()
     except:
         traceback.print_exc()
-        print 'Reload error. Modules not reloaded'
+        print ('Reload error. Modules not reloaded')
 
 def enable():
-    print 'autoreload enabled'
+    print ('autoreload enabled')
     ip = IPython.core.ipapi.get()
     ip.set_hook('pre_run_code_hook', ipython_autoreload_hook)

@@ -333,7 +333,7 @@ def merge(datas):
             if str(engine) not in strmapping:
                 strmapping[str(engine)] = engine
                 merged[engine] = []
-            print strmapping
+            print (strmapping)
             merged[strmapping[str(engine)]].extend(predictions)
     return merged
 

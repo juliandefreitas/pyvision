@@ -17,7 +17,7 @@ import os
 import numpy
 import sys
 
-print "building liblinear"
+print ("building liblinear")
 os.system("make -C vision/liblinear")
 
 root = os.getcwd() + "/vision/"

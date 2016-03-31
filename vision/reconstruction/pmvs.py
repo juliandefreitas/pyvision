@@ -209,18 +209,18 @@ if __name__ == "__main__":
     patches, projections = read("/csail/vision-videolabelme/databases/"
                                 "video_adapt/demos/bottle_table/bundler/pmvs")
 
-    print get_patch_bounds(patches)
+    print (get_patch_bounds(patches))
 
     mapping = RealWorldMap(patches, projections)
 
     patch = patches[0]
-    print "REAL ="
-    print patch.realcoords
-    print ""
+    print ("REAL =")
+    print (patch.realcoords)
+    print ("")
     a, b = mapping.realtoimages(patch.realcoords).items()[0]
-    print "PROJECTION ="
-    print b
-    print ""
-    print "REAL (again) ="
+    print ("PROJECTION =")
+    print (b)
+    print ("")
+    print ("REAL (again) =")
     r = mapping.imagetoreal(a, b)
-    print r
+    print (r)
